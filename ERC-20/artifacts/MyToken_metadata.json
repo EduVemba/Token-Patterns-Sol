@@ -109,6 +109,30 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -175,6 +199,30 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -205,11 +253,11 @@
 	},
 	"sources": {
 		"ERC-20/MyToken.sol": {
-			"keccak256": "0x4b928d68b094b4ace1dff37ec120c7af9dac6ab434a8d8369a3a2f5cb8e3cbe1",
+			"keccak256": "0x59eb06a22061e3b7e2b1ff1fe4bd293b5c25555d4c5723c10c3e81da946b9759",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4839efca3c5a4f6acd4c8f7dfd70bd92ee5941ddf00abff4aedf4089f6f993e1",
-				"dweb:/ipfs/QmShGLANmDGiyQDuqPou6ZsmFMjHZtQfSzchvsCJEtmQxv"
+				"bzz-raw://8cfeda56d5697bde8c932d1dd160dc8ed74cbc24aa6b3e8670bfa282ca6bc93c",
+				"dweb:/ipfs/QmTC5WCAnXAX1PsRJE9n888Kdx7Rm1mCcCSUTi5ecfjVqj"
 			]
 		}
 	},

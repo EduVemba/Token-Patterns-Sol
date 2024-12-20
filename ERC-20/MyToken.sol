@@ -34,4 +34,26 @@ pragma solidity ^0.8.0;
     }
 
 
+    function transfer(address _to,uint256 _value) public returns (bool success) {
+        require(_to != address(0), "Invalid address");
+        require(balanceOf[msg.sender] >= _value, "Insuficient funds");
+
+        //Transfer tokens
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
+
+        emit Transfer(msg.sender, _to, _value);
+        return true;
+    }
+
+
+    function approve(address _spender, uint256 _value) public returns (bool success) {
+        require(_spender != address(0), "Invalid address");
+
+        allowance[msg.sender][_spender] =_value;
+
+        emit Approval(msg.sender, _spender, _value);
+        return true;
+    }
+
  }
