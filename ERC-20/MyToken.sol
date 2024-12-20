@@ -56,4 +56,18 @@ pragma solidity ^0.8.0;
         return true;
     }
 
+
+     // Sending token with third party account
+    function transferFrom(address _sender, address _to, uint256 _value) public returns (bool success) {
+        require(_to != address(0),"Invalid addres");
+        require(balanceOf[_sender] >= _value, "Inssuficient funds");
+        require(allowance[_sender][msg.sender] >= _value, "Not Authorized");
+
+            balanceOf[_sender] -= _value;
+            balanceOf[_to] += _value;
+            allowance[_sender][msg.sender] -= _value;
+
+        return true;
+    }
+
  }
