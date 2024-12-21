@@ -282,11 +282,11 @@
 	},
 	"sources": {
 		"ERC-20/MyToken.sol": {
-			"keccak256": "0x161c55faf357b680c7d05520992f8601e008093e0e97d3345979fc1b0d174a03",
+			"keccak256": "0x24d79fde4a2d30d015475e419d4ecd6043ab55e6b7a26270b3ea04676c9ee802",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3cf244b70c5bd3dec2a37bfa501d60cdb3544f4f7a66d598d02e19b88d5d9de1",
-				"dweb:/ipfs/QmPPwR7ACWq1s3Ytug886FmUG1g3kMTihLaRMBrRczykVU"
+				"bzz-raw://16755d85d11e9f2ec687ada060e4176761a209adb8b4d80b641b3c40014e8864",
+				"dweb:/ipfs/QmPHv9YuBim3PDzU2dJ4g4vTJhpPiLxu5y5cYJW9VuPgNA"
 			]
 		}
 	},

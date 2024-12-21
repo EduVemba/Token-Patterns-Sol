@@ -11,7 +11,7 @@ pragma solidity ^0.8.0;
     // The savings of each address
     mapping (address => uint256) public balanceOf;
 
-    // Returns the remaining number of tokens that the spender is allowed to spend
+    // Returns the remaining number of tokens that the spender is allowed to spend from a account
     mapping(address => mapping(address => uint256)) public allowance;
     
     /*
@@ -36,6 +36,7 @@ pragma solidity ^0.8.0;
 
     function transfer(address _to,uint256 _value) public returns (bool success) {
         require(_to != address(0), "Invalid address");
+        require(_value > 0, "Value mus be greater than 0");
         require(balanceOf[msg.sender] >= _value, "Insuficient funds");
 
         //Transfer tokens
@@ -61,12 +62,15 @@ pragma solidity ^0.8.0;
     function transferFrom(address _sender, address _to, uint256 _value) public returns (bool success) {
         require(_to != address(0),"Invalid addres");
         require(balanceOf[_sender] >= _value, "Inssuficient funds");
-        require(allowance[_sender][msg.sender] >= _value, "Not Authorized");
+        require(allowance[_sender][msg.sender] >= _value, "Allowance exceeded");
+        require(_value > 0, "Value must be greater than zero");
 
             balanceOf[_sender] -= _value;
             balanceOf[_to] += _value;
+
             allowance[_sender][msg.sender] -= _value;
 
+        emit Transfer(_sender, _to, _value);
         return true;
     }
 
