@@ -81,6 +81,25 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -88,6 +107,25 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -104,6 +142,29 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -135,11 +196,11 @@
 	},
 	"sources": {
 		"ERC-721/MyNFT.sol": {
-			"keccak256": "0x1ab065818cbca7ec79c3d02b4b69de5081ed7ddaecc725cf7d6d8d887f0bdaa3",
+			"keccak256": "0xb07ae7f44f7ecc76eff9b2e3f421cf68f2216c16c9669a453ff8c037b8be2212",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://454cb659cadcbc16c7b5033cc0af065c7edfe6d39d5b9067a6ba89b6ef0fb0ff",
-				"dweb:/ipfs/Qma44jyVhJMqYdXcmHezfLnyucSAga89QmL3R4eq29VUAE"
+				"bzz-raw://26549c295b6fb476f810de03ab137637cd6de9dfa831b81d4407fef726977a5b",
+				"dweb:/ipfs/QmV6z4itmB7vXZuAgzozsPpT4yNV3s5qqpqXaPc2Vg6PdZ"
 			]
 		}
 	},
